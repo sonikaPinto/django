@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'learn_users/base.html' %}
+{% load static %}
+
+{%block body-block %}
+<div class="jumbotron">
+  <h3>Login Here</h3>
+  <form action="{% url 'learn_users:user_login' %}" method="post">
+    {% csrf_token %}
+    <label for="user_name">User Name:</label>
+    <input type="text" name="user_name" placeholder="Enter your user name">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Enter your password">
+
+    <input type="submit" class="btn-btn-primary" value="Login">
+
+
+  </form>
+
+</div>
+{% endblock %}

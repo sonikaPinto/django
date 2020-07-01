@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'learn_users/base.html' %}
+{% load static %}
+
+{%block body-block %}
+  {% if registered %}
+    <h3>Thank you for registering </h3>
+  {% else %}
+    <h1>Register Here</h1>
+    <h3>Fill out the Form</h3>
+    <form enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{user_form.as_p}}
+      {{profile_form.as_p}}
+      <input type="submit" name="" value="Register">
+    </form>
+  {% endif %}
+{% endblock %}
