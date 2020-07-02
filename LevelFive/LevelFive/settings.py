@@ -27,7 +27,7 @@ SECRET_KEY = 'x0xq=x@7rhh&)413m2w#xg^qa5hzrnb3_@(cuc-rup!_giyoh^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://sonikapinto.pythonanywhere.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
